@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dpl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: leos
+  template:
+    metadata:
+      labels:
+        app: leos
+    spec:
+      automountServiceAccountToken: false
+      containers:
+      - name: leos
+        image: ghcr.io/minbzk/leos:main
+        imagePullPolicy: Always
+        command: ["/app/entrypoint.sh"]
+        readinessProbe:
+          httpGet:
+            path: /leos-pilot/
+            port: 8080
+          initialDelaySeconds: 360
+        ports:
+        - containerPort: 8080
+        - containerPort: 9095
+        - containerPort: 9096
+        - containerPort: 9097
+        resources:
+          requests:
+            cpu: 300m
+            memory: 6Gi
+            ephemeral-storage: "2Gi"

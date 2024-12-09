@@ -1,0 +1,18 @@
+services:
+  leos:
+    image: ghcr.io/minbzk/leos:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["/app/entrypoint.sh"]
+    ports:
+      - 9095:9095 # user-repo /ud-repo
+      - 9096:9096 # akn4euutil /akn4euutil
+      - 8080:8080 # leos
+      - 9097:9097 # repository /repository'
+      - 9099:9099 # annotate /annotate
+
+
+
+# http://localhost:8080/leos-pilot/ui
+# http://localhost:9099/annotate/app.html

@@ -1,0 +1,34 @@
+publiccodeYmlVersion: "0.2"
+categories:
+  - it-development
+description:
+  en:
+    features:
+      - Open Source
+      - Government
+    genericName: leos
+    longDescription: |
+      Leos stands for Legislation Editing Open Software.
+
+      LEOS is a web tool to support the legislative drafting in the EU with online collaboration,
+
+    shortDescription: WLEOS is a web tool to support the legislative drafting in the EU with online collaboration,
+developmentStatus: concept
+legal:
+  license: EUPL-1.2
+localisation:
+  availableLanguages:
+    - en
+    - nl
+  localisationReady: false
+maintenance:
+  contacts:
+    - name: Mijn Bureau
+      email: opensource@minbzk.nl
+  type: community
+name: leos
+platforms:
+  - docs
+releaseDate: "2024-12-15"
+softwareType: standalone/web
+url: "https://github.com/MinBZK/leos"
