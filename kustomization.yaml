@@ -11,7 +11,7 @@ commonLabels:
 buildMetadata: [originAnnotations]
 
 
-resources:
-  - manifests/deployment.yaml
-  - manifests/service.yaml
-  - manifests/ingress.yaml
+# resources:
+#   - manifests/deployment.yaml
+#   - manifests/service.yaml
+#   - manifests/ingress.yaml
